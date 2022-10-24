@@ -8,9 +8,6 @@ const HotTopics = ({ topics }) => {
         flexDirection: "row",
       }}
     >
-      <CardHeader>
-        <Typography variant="h3">Hot Topics</Typography>
-      </CardHeader>
       <Box
         sx={{
           display: "flex",
