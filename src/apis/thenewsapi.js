@@ -7,6 +7,7 @@ const thenewsapi = axios.create({
   baseURL: baseUrl,
   params: {
     api_token: API_TOKEN,
+    language: "en",
   },
 });
 

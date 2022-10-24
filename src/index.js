@@ -4,11 +4,13 @@ import "./index.css";
 import App from "./App";
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 import HomeNews from "./containers/HomeNews";
+import DetailNews from "./containers/DetailNews";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="/" element={<HomeNews />} />
+      <Route path="detailnews/:uuid" element={<DetailNews />} />
     </Route>
   )
 );

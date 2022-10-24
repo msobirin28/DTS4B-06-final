@@ -10,7 +10,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { NavLink } from "react-router-dom";
 
 const navItems = [
-  { text: "News", link: "/homenews" },
+  { text: "News", link: "/" },
   { text: "Protal", link: "/portal" },
 ];
 
@@ -58,7 +58,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SearchAppBar() {
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", marginBottom: 10 }}>
       <AppBar>
         <Toolbar>
           <Box
