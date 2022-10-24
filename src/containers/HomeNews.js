@@ -52,27 +52,42 @@ const HomeNews = () => {
         flexDirection: "column",
       }}
     >
-      <Typography variant="h4" sx={{ textAlign: "left", paddingLeft: 2 }}>
-        Hot Topics
-      </Typography>
-      {topics.map((topics) => (
-        <HotTopics topics={topics} />
-      ))}
-
-      <Typography variant="h4" sx={{ textAlign: "left", paddingLeft: 2 }}>
-        Latest News
-      </Typography>
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          justifyContent: "space-between",
+          flexDirection: "column",
+          margin: 5,
         }}
       >
-        {news.map((news) => (
-          <LatestNews key={news.title} news={news} handleClick={handleClick}></LatestNews>
+        <Typography variant="h4" sx={{ textAlign: "left", marginBottom: 2 }}>
+          Hot Topics
+        </Typography>
+        {topics.map((topics) => (
+          <HotTopics topics={topics} />
         ))}
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          margin: 5,
+        }}
+      >
+        <Typography variant="h4" sx={{ textAlign: "left", marginBottom: 2 }}>
+          Latest News
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+          }}
+        >
+          {news.map((news) => (
+            <LatestNews key={news.title} news={news} handleClick={handleClick}></LatestNews>
+          ))}
+        </Box>
       </Box>
     </Box>
   );

@@ -48,8 +48,7 @@ const HomeNews = () => {
               image={`${detail.image_url}`}
               alt={`${detail.title}`}
               sx={{
-                height: "100%",
-                backgroundSize: "cover",
+                height: 400,
               }}
             />
             <CardContent>
