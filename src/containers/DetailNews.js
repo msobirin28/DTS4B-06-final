@@ -44,7 +44,7 @@ const HomeNews = () => {
       }
     };
     fetchNews();
-  }, []);
+  }, [params.uuid]);
 
   return (
     <Box
