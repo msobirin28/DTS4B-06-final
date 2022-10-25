@@ -40,6 +40,10 @@ export default function SideBar() {
   const handleLogin = () => {
     navigate("/login");
   };
+
+  const handleSignIn = () => {
+    navigate("/register");
+  };
   const onLogout = async () => {
     try {
       await signOut(auth);
@@ -80,7 +84,7 @@ export default function SideBar() {
               <ListItemIcon>
                 <LogoutIcon />
               </ListItemIcon>
-              <ListItemText primary="Log Out" />
+              <ListItemText primary="Sign Out" />
             </ListItemButton>
           </ListItem>
         </List>
@@ -93,7 +97,15 @@ export default function SideBar() {
               <ListItemIcon>
                 <LoginIcon />
               </ListItemIcon>
-              <ListItemText primary="Log In" />
+              <ListItemText primary="Sign In" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton onClick={handleSignIn}>
+              <ListItemIcon>
+                <LoginIcon />
+              </ListItemIcon>
+              <ListItemText primary="Sign In" />
             </ListItemButton>
           </ListItem>
         </List>
