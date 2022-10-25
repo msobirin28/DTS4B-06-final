@@ -8,10 +8,12 @@ import DetailNews from "./containers/DetailNews";
 import Portal from "./containers/Portal";
 import Login from "./containers/Login";
 import Register from "./containers/Register";
+import Home from "./containers/Home";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
+      <Route path="/" element={<Home />} />
       <Route path="news" element={<HomeNews />} />
       <Route path="detailnews/:uuid" element={<DetailNews />} />
       <Route path="portal" element={<Portal />} />

@@ -15,7 +15,7 @@ const HotTopics = ({ topics, handleClick }) => {
     }
   };
   return (
-    <Card>
+    <Card sx={{ marginTop: 2 }}>
       <CardActionArea
         onClick={() => handleClick(topics.uuid)}
         sx={{
@@ -49,11 +49,10 @@ const HotTopics = ({ topics, handleClick }) => {
             </Box>
           </Box>
         </Box>
-
         <Box>
           <CardContent>
             <Typography variant="body1" sx={{ textAlign: "left" }}>
-              {topics.snippet}
+              {topics.snippet ? topics.snippet : topics.description}
             </Typography>
           </CardContent>
         </Box>

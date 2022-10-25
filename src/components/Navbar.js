@@ -5,11 +5,14 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import SideBar from "./SideBar";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
+import { MovieFilter } from "@mui/icons-material";
+import { Typography } from "@mui/material";
+import NewspaperIcon from "@mui/icons-material/Newspaper";
 
 const navItems = [
   { text: "News", link: "/news" },
@@ -63,6 +66,20 @@ export default function SearchAppBar() {
     <Box sx={{ display: "flex", marginBottom: 5 }}>
       <AppBar>
         <Toolbar>
+          <NewspaperIcon sx={{ display: "flex", mr: 1 }} />
+          <Typography
+            variant="h6"
+            sx={{
+              display: "block",
+              fontFamily: "monospace",
+              fontWeight: 700,
+              letterSpacing: ".3rem",
+            }}
+          >
+            <Link style={{ color: "inherit", textDecoration: "inherit", mr: 2 }} to="/">
+              MSN
+            </Link>
+          </Typography>
           <Box
             sx={{
               flexGrow: 1,
