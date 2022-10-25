@@ -73,7 +73,7 @@ const HomeNews = () => {
           margin: 5,
         }}
       >
-        <Typography variant="h4" sx={{ textAlign: "left", marginBottom: 2 }}>
+        <Typography variant="h4" sx={{ textAlign: "left" }}>
           Latest News
         </Typography>
         <Box

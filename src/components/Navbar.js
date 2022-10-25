@@ -6,10 +6,13 @@ import Toolbar from "@mui/material/Toolbar";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import { NavLink } from "react-router-dom";
-import Sidebar from "./components/SideBar";
+import SideBar from "./SideBar";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import Button from "@mui/material/Button";
 
 const navItems = [
-  { text: "News", link: "/" },
+  { text: "News", link: "/news" },
   { text: "Protal", link: "/portal" },
 ];
 
@@ -47,9 +50,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("sm")]: {
-      width: "12ch",
+      width: "0ch",
       "&:focus": {
-        width: "20ch",
+        width: "12ch",
       },
     },
   },
@@ -62,7 +65,7 @@ export default function SearchAppBar() {
         <Toolbar>
           <Box
             sx={{
-              flexGrow: 2,
+              flexGrow: 1,
               display: "flex",
               mr: 1,
             }}
@@ -80,7 +83,7 @@ export default function SearchAppBar() {
               </SearchIconWrapper>
               <StyledInputBase placeholder="Search…" inputProps={{ "aria-label": "search" }} />
             </Search>
-            <Sidebar />
+            <SideBar />
           </Box>
         </Toolbar>
       </AppBar>

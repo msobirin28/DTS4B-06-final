@@ -7,7 +7,7 @@ import { CardActionArea, Box } from "@mui/material";
 
 const LatestNews = ({ news, handleClick }) => {
   return (
-    <Card sx={{ maxWidth: 270 }}>
+    <Card sx={{ maxWidth: 270, marginTop: 4 }}>
       <CardActionArea onClick={() => handleClick(news.uuid)}>
         <CardMedia component="img" width="270" height="176" image={`${news.image_url}`} alt={`${news.title}`} />
         <CardContent sx={{ textAlign: "left" }}>

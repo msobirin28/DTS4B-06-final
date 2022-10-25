@@ -12,7 +12,7 @@ import Register from "./containers/Register";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route path="/" element={<HomeNews />} />
+      <Route path="news" element={<HomeNews />} />
       <Route path="detailnews/:uuid" element={<DetailNews />} />
       <Route path="portal" element={<Portal />} />
       <Route path="login" element={<Login />} />
