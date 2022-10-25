@@ -28,7 +28,7 @@ export default function LabTabs() {
 
   useEffect(() => {
     fetchNews(value);
-  }, []);
+  }, [value]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
