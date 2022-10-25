@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Button, Link, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -14,7 +14,19 @@ import LatestNews from "../components/LatestNews";
 const HomeNews = () => {
   const [detail, setDetail] = useState([]);
   const params = useParams();
+  let date_1 = new Date(detail.published_at);
+  let date_2 = new Date();
 
+  const days = (date_1, date_2) => {
+    let difference = date_2.getTime() - date_1.getTime();
+    let TotalDays = Math.ceil(difference / (1000 * 3600 * 24));
+    if (TotalDays > 0) {
+      return TotalDays + " Days Ago";
+    } else {
+      let TotalDays = Math.ceil(difference / 3600000);
+      return TotalDays + " Hours Ago";
+    }
+  };
   useEffect(() => {
     const fetchNews = async () => {
       try {
@@ -33,6 +45,7 @@ const HomeNews = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "left",
+        paddingTop: 5,
         paddingLeft: 10,
         paddingRight: 10,
       }}
@@ -42,24 +55,36 @@ const HomeNews = () => {
       </Typography>
       <Box>
         <Card sx={{ maxWidth: "100%" }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              image={`${detail.image_url}`}
-              alt={`${detail.title}`}
+          <CardMedia
+            component="img"
+            image={`${detail.image_url}`}
+            alt={`${detail.title}`}
+            sx={{
+              height: 400,
+            }}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: "left" }}>
+              {detail.title}
+            </Typography>
+            <Box
               sx={{
-                height: 400,
+                maxWidth: 400,
+                display: "flex",
               }}
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                {detail.title}
+            >
+              <Typography variant="body2" sx={{ marginRight: 2, width: "auto" }}>
+                {days(date_1, date_2)}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {detail.description}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
+              <Typography variant="body2">{detail.source}</Typography>
+            </Box>
+            <Typography variant="body2" color="text.secondary" sx={{ textAlign: "left", marginTop: 5, marginBottom: 5 }}>
+              {detail.description}
+            </Typography>
+            <Button variant="outlined" href={`${detail.url}`} target="_blank">
+              Read More
+            </Button>
+          </CardContent>
         </Card>
       </Box>
     </Box>

@@ -63,7 +63,7 @@ const HomeNews = () => {
           Hot Topics
         </Typography>
         {topics.map((topics) => (
-          <HotTopics topics={topics} />
+          <HotTopics topics={topics} handleClick={handleClick} />
         ))}
       </Box>
       <Box

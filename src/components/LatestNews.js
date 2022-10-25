@@ -10,7 +10,7 @@ const LatestNews = ({ news, handleClick }) => {
     <Card sx={{ maxWidth: 270 }}>
       <CardActionArea onClick={() => handleClick(news.uuid)}>
         <CardMedia component="img" width="270" height="176" image={`${news.image_url}`} alt={`${news.title}`} />
-        <CardContent sx={{ textAlign: "left", paddingLeft: 0 }}>
+        <CardContent sx={{ textAlign: "left" }}>
           <Typography gutterBottom variant="h6" component="div">
             {news.title}
           </Typography>
