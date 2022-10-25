@@ -8,6 +8,7 @@ import { CardActionArea, Box } from "@mui/material";
 const LatestNews = ({ news, handleClick }) => {
   let date_1 = new Date(news.published_at);
   let date_2 = new Date();
+  const source = news.source.substring(0, news.source.indexOf(".")).replaceAll("-", "");
 
   const days = (date_1, date_2) => {
     let difference = date_2.getTime() - date_1.getTime();
@@ -37,7 +38,7 @@ const LatestNews = ({ news, handleClick }) => {
               {days(date_1, date_2)}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              {news.source}
+              {source}
             </Typography>
           </Box>
         </CardContent>

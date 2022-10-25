@@ -9,9 +9,7 @@ import { Typography } from "@mui/material";
 
 const HomeNews = () => {
   const [news, setNews] = useState([]);
-  const [newsReady, setNewsReady] = useState(false);
   const [topics, setTopics] = useState([]);
-  const [topicsReady, setTopicsReady] = useState(false);
 
   const navigate = useNavigate();
 
@@ -20,7 +18,6 @@ const HomeNews = () => {
       try {
         const fetchedNews = await thenewsapi.get("news/all");
         setNews(fetchedNews.data.data);
-        setNewsReady(true);
       } catch (error) {
         console.log(error);
       }
@@ -33,7 +30,6 @@ const HomeNews = () => {
       try {
         const fetchedTopics = await thenewsapi.get("news/top", { params: { limit: 1 } });
         setTopics(fetchedTopics.data.data);
-        setTopicsReady(true);
       } catch (error) {
         console.log(error);
       }
@@ -59,7 +55,7 @@ const HomeNews = () => {
           margin: 5,
         }}
       >
-        <Typography variant="h4" sx={{ textAlign: "left", marginBottom: 2 }}>
+        <Typography variant="h5" sx={{ textAlign: "left", marginBottom: 2 }}>
           Hot Topics
         </Typography>
         {topics.map((topics) => (
@@ -73,7 +69,7 @@ const HomeNews = () => {
           margin: 5,
         }}
       >
-        <Typography variant="h4" sx={{ textAlign: "left" }}>
+        <Typography variant="h5" sx={{ textAlign: "left" }}>
           Latest News
         </Typography>
         <Box

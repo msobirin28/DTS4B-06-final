@@ -7,10 +7,6 @@ import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link, NavLink } from "react-router-dom";
 import SideBar from "./SideBar";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import Button from "@mui/material/Button";
-import { MovieFilter } from "@mui/icons-material";
 import { Typography } from "@mui/material";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
 

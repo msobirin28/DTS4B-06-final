@@ -1,15 +1,12 @@
-import { Button, Link, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import { CardActionArea } from "@mui/material";
 
 import thenewsapi from "../apis/thenewsapi";
-import HotTopics from "../components/HotTopics";
-import LatestNews from "../components/LatestNews";
 
 const HomeNews = () => {
   const [detail, setDetail] = useState([]);
