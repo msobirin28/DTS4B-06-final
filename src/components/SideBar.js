@@ -41,7 +41,7 @@ export default function SideBar() {
     navigate("/login");
   };
 
-  const handleSignIn = () => {
+  const handleSignUp = () => {
     navigate("/register");
   };
   const onLogout = async () => {
@@ -101,11 +101,11 @@ export default function SideBar() {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton onClick={handleSignIn}>
+            <ListItemButton onClick={handleSignUp}>
               <ListItemIcon>
                 <LoginIcon />
               </ListItemIcon>
-              <ListItemText primary="Sign In" />
+              <ListItemText primary="Sign Up" />
             </ListItemButton>
           </ListItem>
         </List>
