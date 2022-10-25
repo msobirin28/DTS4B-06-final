@@ -15,6 +15,7 @@ import { Typography } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import LogoutIcon from "@mui/icons-material/Logout";
 import LoginIcon from "@mui/icons-material/Login";
+import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
 
@@ -103,7 +104,7 @@ export default function SideBar() {
           <ListItem disablePadding>
             <ListItemButton onClick={handleSignUp}>
               <ListItemIcon>
-                <LoginIcon />
+                <AppRegistrationIcon />
               </ListItemIcon>
               <ListItemText primary="Sign Up" />
             </ListItemButton>
