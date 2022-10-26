@@ -76,3 +76,7 @@ MSN adalah web berita international yang menampilkan berita-berita terbaru dari 
 
 - Fitur ini menampilkan informasi user login beruba email user tersebut didalam side bar.
 - Fitur ini hanya akan muncul jika user sudah login
+
+# Demo APP
+
+![](src/src/React%20App.gif)
